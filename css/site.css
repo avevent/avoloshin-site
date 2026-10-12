@@ -295,3 +295,12 @@ p { margin: 0 0 16px; }
 @media (max-width: 700px) { .atwork__strip figure { flex-basis: 85vw; } }
 
 @media (max-width: 560px) { .hide-sm { display: none; } }
+
+/* phones: the closing line sits up top, above the hall, so the host stays clear */
+@media (max-width: 700px) {
+  .hero__outro { top: 84px; bottom: auto; left: var(--gutter); right: var(--gutter); text-align: left; }
+  .hero__outro-sub { margin-left: 0; }
+  .hero__stage::before {
+    background: linear-gradient(180deg, rgba(0,0,0, calc(.55 + .35 * var(--outro-o, 0))) 0%, rgba(0,0,0,0) calc(18% + 22% * var(--outro-o, 0)));
+  }
+}
